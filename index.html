@@ -89,6 +89,24 @@
         console.log(resultado);
         console.log(exp.lastIndex);
       }
+
+      var ano = '15-04-2021';
+      var exp = /-/g;
+      anoComBarra = ano.replace(exp, '/');
+      console.log(anoComBarra);
+
+      var arquivo = '100,200-150,200;20';
+      var exp = /[,\-;]/g;
+      var valores = arquivo.split(exp);
+      console.log(valores);
+
+      var codigos = 'A121B12112C12212F12G01';
+      var exp = /[A-Za-z]\d+/g;
+      var codigosExtraidos = codigos.match(exp);
+      console.log(codigosExtraidos);
+      while ((resultado = exp.exec(codigos))) {
+        console.log(resultado);
+      }
     </script>
     <script src="js/regex.js"></script>
   </body>
